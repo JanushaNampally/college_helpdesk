@@ -1,0 +1,9 @@
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="message" placeholder="Ask your question">
+    <button type="submit">Send</button>
+</form>
+
+{% if reply %}
+<p><b>Bot:</b> {{ reply }}</p>
+{% endif %}
